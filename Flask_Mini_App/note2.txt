@@ -1,0 +1,41 @@
+HOW TO CREATAE DATABASE FOR OUR FLASK APP
+
+
+1 ) This two line of code for database, use this two line code in our flask app
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+db = SQLAlchemy(app)
+
+
+2 ) open terminal and type pytho then click enter then import ( from app import db ) then create db like this >
+
+>>> from app import db
+>>> db.create_all()
+
+
+3 ) Some code for create and see data in our database with terminal
+
+>>> from app import db
+>>> db.create_all()
+>>> from app import BlogPost
+>>> BlogPost.query.all()
+[]
+>>> db.session.add(BlogPost(title='Blog Post 1 new', content='Blog post content 1 new', author='SRUdoy'))
+>>> BlogPost.query.all()
+[Blog Post1]
+>>> db.session.add(BlogPost(title='Blog Post 2 second new', content='Blog post content 2 second new', author='SRUdoy'))
+>>> BlogPost.query.all()
+[Blog Post1, Blog Post2]
+>>> BlogPost.query.all()[0].title
+'Blog Post 1 new'
+>>> BlogPost.query.all()[0].content
+'Blog post content 1 new'
+>>> BlogPost.query.all()[0].author 
+'SRUdoy'
+>>> BlogPost.query.all()[0].date_posted
+datetime.datetime(2022, 2, 7, 14, 5, 46, 70834)
+>>> BlogPost.query.all()[1].author     
+'SRUdoy'
+>>>
+
+

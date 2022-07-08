@@ -1,0 +1,9 @@
+Database Creations...
+
+<< STEP-1 >>
+
+(venv) PS C:\Users\User\OneDrive\Documents\Flask_Practice\Flask_Beginner> python
+>>> from app import db
+>>> cls
+>>> db.create_all()
+>>> exit()

@@ -1,0 +1,5 @@
+FLASK NOTE...
+
+
+step-1 : first create a folder then create python file for write python flsk code, then create virtualenv [ virtualenv env ] then -
+active virtualenv [ env/script/active ], then install all the packages like [ pip install flask ]

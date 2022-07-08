@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Contact {% endblock title %}
+
+
+{% block content %}
+    <div class="container">
+        <form class="m-5">
+            <div class="mb-3">
+              <label for="fullname" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullname" aria-describedby="fullnameHelp" placeholder="Enter Your Full Name">
+            </div>
+            <div class="mb-3">
+              <label for="emailaddress" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailaddress" aria-describedby="emailHelp" placeholder="Enter Your Email Address">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
+            </div>
+            <div class="mb-3">
+              <textarea name="textarea" id="textarea" cols="100" rows="5" placeholder="Type Your Text"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+          </form>
+    </div>
+{% endblock content %}
